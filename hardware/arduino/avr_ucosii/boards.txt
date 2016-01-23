@@ -1,0 +1,97 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+menu.cpu=Processor
+
+
+##############################################################
+
+mega_ucosii.name=Arduino Mega or Mega 2560 + uCOSii
+
+mega_ucosii.vid.0=0x2341
+mega_ucosii.pid.0=0x0010
+mega_ucosii.vid.1=0x2341
+mega_ucosii.pid.1=0x0042
+mega_ucosii.vid.2=0x2a03
+mega_ucosii.pid.2=0x0010
+mega_ucosii.vid.3=0x2a03
+mega_ucosii.pid.3=0x0042
+
+mega_ucosii.upload.tool=avrdude
+mega_ucosii.upload.maximum_data_size=8192
+
+mega_ucosii.bootloader.tool=avrdude
+mega_ucosii.bootloader.low_fuses=0xFF
+mega_ucosii.bootloader.unlock_bits=0x3F
+mega_ucosii.bootloader.lock_bits=0x0F
+
+mega_ucosii.build.f_cpu=16000000L
+mega_ucosii.build.core=arduino.ucosii
+mega_ucosii.build.variant=mega
+# default board  may be overridden by the cpu menu
+mega_ucosii.build.board=AVR_MEGA2560
+
+## Arduino Mega w/ ATmega2560
+## -------------------------
+mega_ucosii.menu.cpu.atmega2560=ATmega2560 (Mega 2560)
+
+mega_ucosii.menu.cpu.atmega2560.upload.protocol=wiring
+mega_ucosii.menu.cpu.atmega2560.upload.maximum_size=253952
+mega_ucosii.menu.cpu.atmega2560.upload.speed=115200
+
+mega_ucosii.menu.cpu.atmega2560.bootloader.high_fuses=0xD8
+mega_ucosii.menu.cpu.atmega2560.bootloader.extended_fuses=0xFD
+mega_ucosii.menu.cpu.atmega2560.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex
+
+mega_ucosii.menu.cpu.atmega2560.build.mcu=atmega2560
+mega_ucosii.menu.cpu.atmega2560.build.board=AVR_MEGA2560
+
+## Arduino Mega w/ ATmega1280
+## -------------------------
+mega_ucosii.menu.cpu.atmega1280=ATmega1280
+
+mega_ucosii.menu.cpu.atmega1280.upload.protocol=arduino
+mega_ucosii.menu.cpu.atmega1280.upload.maximum_size=126976
+mega_ucosii.menu.cpu.atmega1280.upload.speed=57600
+
+mega_ucosii.menu.cpu.atmega1280.bootloader.high_fuses=0xDA
+mega_ucosii.menu.cpu.atmega1280.bootloader.extended_fuses=0xF5
+mega_ucosii.menu.cpu.atmega1280.bootloader.file=atmega/ATmegaBOOT_168_atmega1280.hex
+
+mega_ucosii.menu.cpu.atmega1280.build.mcu=atmega1280
+mega_ucosii.menu.cpu.atmega1280.build.board=AVR_MEGA
+
+##############################################################
+
+megaADK_ucosii.name=Arduino Mega ADK  + uCOSii
+
+megaADK_ucosii.vid.0=0x2341
+megaADK_ucosii.pid.0=0x003f
+megaADK_ucosii.vid.1=0x2341
+megaADK_ucosii.pid.1=0x0044
+megaADK_ucosii.vid.2=0x2a03
+megaADK_ucosii.pid.2=0x003f
+megaADK_ucosii.vid.3=0x2a03
+megaADK_ucosii.pid.3=0x0044
+
+megaADK_ucosii.upload.tool=avrdude
+megaADK_ucosii.upload.protocol=wiring
+megaADK_ucosii.upload.maximum_size=253952
+megaADK_ucosii.upload.maximum_data_size=8192
+megaADK_ucosii.upload.speed=115200
+
+megaADK_ucosii.bootloader.tool=avrdude
+megaADK_ucosii.bootloader.low_fuses=0xFF
+megaADK_ucosii.bootloader.high_fuses=0xD8
+megaADK_ucosii.bootloader.extended_fuses=0xFD
+megaADK_ucosii.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex
+megaADK_ucosii.bootloader.unlock_bits=0x3F
+megaADK_ucosii.bootloader.lock_bits=0x0F
+
+megaADK_ucosii.build.mcu=atmega2560
+megaADK_ucosii.build.f_cpu=16000000L
+megaADK_ucosii.build.board=AVR_ADK
+megaADK_ucosii.build.core=arduino
+megaADK_ucosii.build.variant=mega
+
+##############################################################
+
